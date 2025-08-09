@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-# Minimal KG visualizer: spring layout only, tiny CLI.
-# Usage:
-#   python utils/graph_visualization.py -i data/knowledge_graphs/mock_graph.json -o data/knowledge_graphs/mock_graph.png
-#   (omit -o to show an interactive window)
 
 import json, os, argparse
 import networkx as nx
