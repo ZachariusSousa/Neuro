@@ -1,0 +1,60 @@
+{
+  "nodes": [
+    {
+      "id": "MineWood",
+      "type": "event",
+      "data": {
+        "confidence": 0.9,
+        "visited": true
+      }
+    },
+    {
+      "id": "MineIron",
+      "type": "event",
+      "data": {
+        "confidence": 0.7
+      }
+    },
+    {
+      "id": "CraftPickaxe",
+      "type": "tool",
+      "data": {
+        "confidence": 0.6
+      }
+    },
+    {
+      "id": "MineDiamond",
+      "type": "goal",
+      "data": {
+        "confidence": 0.8
+      }
+    },
+    {
+      "id": "HasIronPickaxe",
+      "type": "context",
+      "data": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "MineWood",
+      "target": "CraftPickaxe",
+      "type": "AND"
+    },
+    {
+      "source": "MineIron",
+      "target": "CraftPickaxe",
+      "type": "AND"
+    },
+    {
+      "source": "CraftPickaxe",
+      "target": "HasIronPickaxe",
+      "type": "IMPLIES"
+    },
+    {
+      "source": "HasIronPickaxe",
+      "target": "MineDiamond",
+      "type": "AND"
+    }
+  ]
+}
